@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Patient {
 
@@ -17,12 +19,33 @@ public class Patient {
 	private String firstName;
 	private String lastName;
 	private String middleName;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birthDay;
+
 	private String birthPlace;
 	private String gender;
 	private String civilStatus;
 	private String religion;
 	private String bloodType;
+	private String address;
+	private Date added;
+
+	public Date getAdded() {
+		return added;
+	}
+
+	public void setAdded(Date added) {
+		this.added = added;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
 	public Long getId() {
 		return id;

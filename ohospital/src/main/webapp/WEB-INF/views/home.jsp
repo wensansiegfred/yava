@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/adminlte/AdminLTE.min.css">
 	<link rel="stylesheet" href="../assets/css/adminlte/skins/_all-skins.min.css">
+	<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
@@ -52,7 +53,7 @@
 		        <li>
 		          <a href="#">
 		            <div class="pull-left">
-		              <img src="../assets/images/user3-128x128.jpg" class="img-circle" alt="User Image">
+		              <img src="../assets/images/avatar2.png" class="img-circle" alt="User Image">
 		            </div>
 		            <h4>
 		              AdminLTE Design Team
@@ -64,7 +65,7 @@
 		        <li>
 		          <a href="#">
 		            <div class="pull-left">
-		              <img src="../assets/images/user4-128x128.jpg" class="img-circle" alt="User Image">
+		              <img src="../assets/images/avatar2.png" class="img-circle" alt="User Image">
 		            </div>
 		            <h4>
 		              Developers
@@ -76,7 +77,7 @@
 		        <li>
 		          <a href="#">
 		            <div class="pull-left">
-		              <img src="../assets/images/user3-128x128.jpg" class="img-circle" alt="User Image">
+		              <img src="../assets/images/avatar.png" class="img-circle" alt="User Image">
 		            </div>
 		            <h4>
 		              Sales Department
@@ -88,7 +89,7 @@
 		        <li>
 		          <a href="#">
 		            <div class="pull-left">
-		              <img src="../assets/images/user4-128x128.jpg" class="img-circle" alt="User Image">
+		              <img src="../assets/images/avatar.png" class="img-circle" alt="User Image">
 		            </div>
 		            <h4>
 		              Reviewers
@@ -281,26 +282,15 @@
 		    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
 		  </div>
 		</div>
-		<!-- search form -->
-		<form action="#" method="get" class="sidebar-form">
-		  <div class="input-group">
-		    <input type="text" name="q" class="form-control" placeholder="Search...">
-		        <span class="input-group-btn">
-		          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-		          </button>
-		        </span>
-		  </div>
-		</form>
-		<!-- /.search form -->
 		<!-- sidebar menu: : style can be found in sidebar.less -->
 		  <ul class="sidebar-menu">
 		    <li class="header">MAIN NAVIGATION</li>
-		    <li class="active treeview">
+		    <li class="active treeview" _page_path="/dashboard/page">
 		      <a href="#">
 		        <i class="fa fa-dashboard"></i> <span>Dashboard</span>		        
 		      </a>		     
 		    </li>
-		    <li class="treeview">
+		    <li class="treeview" _page_path="/patient/all">
 		      <a href="#">
 		        <i class="fa fa-wheelchair"></i>
 		        <span>Patient Management</span>		       
@@ -310,7 +300,7 @@
 		</section>
 		<!-- /.sidebar -->
 		</aside>
-		<div class="content-wrapper">
+		<div class="content-wrapper main-content">
 		    <!-- Content Header (Page header) -->
 		    <section class="content-header">
 		      <h1>
@@ -336,6 +326,9 @@
 	<script src="../assets/js/jquery-2.2.3.min.js"></script>
 	<script src="../assets/js/jquery-ui.min.js"></script>
 	<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
-	<script src="../assets/js/app.min.js"></script>	
+	<script src="../assets/js/app.min.js"></script>
+	<script src="../assets/js/notify.min.js"></script>
+	<script src="../assets/js/home.js"></script>	
+	<script src="../assets/js/util.js"></script>		
 </body>
 </html>
