@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Search Contacts' /}
+<div class="container">
+	<div class="menu">
+		<ul class="tab-ul">
+			<li class="active search">Search</li>
+			<li class="show"><a href="@{Application.allcontact}">Show All</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		#{form @Application.searchTag(tagname)}
+			<p>
+		    	<label for="tagname">Enter Tag Name: </label>
+		        <input type="text" name="tagname" id="tagname" class="form-control"/>
+		    </p>
+		    #{if counts > 0}
+		    	<p>
+		        	${counts} contacts added.
+		    	</p>	
+		    #{/if}
+		    <p>
+		        <input type="submit" value="Search" class="btn"/>
+		    </p>		    
+		#{/form}
+	</div>
+</div>

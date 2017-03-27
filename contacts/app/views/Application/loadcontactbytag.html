@@ -1,0 +1,59 @@
+#{extends 'main.html' /}
+#{set title:'All Contacts' /}
+<div class="container">
+	<div class="menu">
+		<ul class="tab-ul">
+			<li class="search"><a href="@{Application.index}">Search</a></li>
+			<li class="active show">Show All</li>
+		</ul>
+	</div>
+	<div class="content">
+	<h4>All Contacts</h4>
+	<select id="filter_by_tag" class="form-control" style="width: 200px; margin-bottom: 10px;">
+		<option value="all">All</option>
+		#{list items:selectMenu, as:'tag' }
+			#{if tag == tagname}
+				<option value="${tag}" selected>${tag}</option>
+			#{/if}
+			#{if tag != tagname}
+				<option value="${tag}">${tag}</option>
+			#{/if}
+		#{/list}
+	</select>
+	#{if contacts.size()}
+		<table id="allcontacts">
+			<thead>
+				<th>Person Id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Title</th>
+				<th>Company Name</th>
+				<th>LinkedIn</th>
+				<th>Background</th>
+				<th>Email</th>
+				<th>Phone</th>				
+			</thead>
+			<tbody>
+				#{list items:contacts, as:'contact' }
+					<tr>
+						<td>${contact.personId}</td>
+						<td>${contact.firstName}</td>
+						<td>${contact.lastName}</td>
+						<td>${contact.title}</td>
+						<td>${contact.companyName}</td>
+						<td>${contact.linkedInUrl}</td>	
+						<td>${contact.background}</td>
+						<td>${contact.emailAddress}</td>
+						<td>${contact.phoneNumber}</td>
+					</tr>							
+				#{/list}	
+			</tbody>
+		</table>		
+	#{/if}
+	#{if contacts.size() < 1}
+		<p>
+			<h1>No Contacts.</h1>
+		</p>
+	#{/if}	
+	</div>
+</div>
